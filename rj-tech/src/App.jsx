@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import Navbar from "./components/Navbar"
 
 function App() {
  
@@ -6,6 +7,7 @@ function App() {
   return (
       <div className="">
        <Router>
+        <Navbar />
         <Routes>
           <Route path='/'/>
         <Route path='/cart'/>
