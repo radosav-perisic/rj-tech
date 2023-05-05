@@ -9,6 +9,11 @@ const Product = (props) => {
         <p>{productName}</p>
         <p>${price}</p>
       </div>
+      <button
+        className="hover:bg-gray-700 hover:text-white hover:cursor-pointer duration-300 bg-transparent border-gray-700 border-2 min-w-[100px] pl-[10px] pr-[10px] pt-[5px] pb-[5px] rounded-2xl"
+      >
+        Add to Cart
+      </button>
     </div>
   );
 };
