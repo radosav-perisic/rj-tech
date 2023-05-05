@@ -1,11 +1,11 @@
-import peach12 from "../src/assets/peach12.jpg";
-import red13 from "../src/assets/red13.jpg";
-import capriblue12 from "../src/assets/capriblue12.jpg";
-import deepnavy12 from "../src/assets/deepnavy12.jpg";
-import purple12 from "../src/assets/12purple.jpg";
-import black12 from "../src/assets/black12.jpg";
-import pink12 from "../src/assets/pink12.jpg";
-import orange12 from "../src/assets/orange12.jpg";
+import peach12 from "./assets/peach12.jpg";
+import red13 from "./assets/red13.jpg";
+import capriblue12 from "./assets/capriblue12.jpg";
+import deepnavy12 from "./assets/deepnavy12.jpg";
+import purple12 from "./assets/purple12.jpg";
+import black12 from "./assets/black12.jpg";
+import pink12 from "./assets/pink12.jpg";
+import orange12 from "./assets/orange12.jpg";
 
 export const PRODUCTS = [
   {
