@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import {Context} from '../context/Context'
 
 const Product = (props) => {
   const { id, productName, price, productImage } = props.data;
+  const {addToCart, cartItems} =useContext(Context)
+
+  const cartItemAmount = cartItems[id]
+
   return (
     <div className="rounded-2xl lg:w-[300px] lg:h-[350px] lg:m-[100px] w-[120px] h-[170px] mx-auto flex-col justify-center flex items-center transition ease-in duration-300">
       <img className="w-full max-w-[400px]" src={productImage} />
@@ -10,9 +15,10 @@ const Product = (props) => {
         <p>${price}</p>
       </div>
       <button
+      onClick={() => addToCart(id)}
         className="hover:bg-gray-700 hover:text-white hover:cursor-pointer duration-300 bg-transparent border-gray-700 border-2 min-w-[100px] pl-[10px] pr-[10px] pt-[5px] pb-[5px] rounded-2xl"
       >
-        Add to Cart
+        Add to Cart {cartItemAmount > 0 && <> ({cartItemAmount})</>}
       </button>
     </div>
   );
