@@ -22,7 +22,11 @@ const ContextProvider = (props) => {
     setCartItems((prev) => ({...prev, [itemId]: prev[itemId] - 1}))
   }
 
-const contextValue = {cartItems, addToCart, removeFromCart}
+  const updateCartItem = (newAmount, itemId) => {
+    setCartItems((prev)=> ({...prev, [itemId] : newAmount}))
+  }
+
+const contextValue = {cartItems, addToCart, removeFromCart, updateCartItem}
 
 
   return <Context.Provider value={contextValue}>{props.children}</Context.Provider>;
