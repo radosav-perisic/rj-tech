@@ -7,7 +7,7 @@ const Navbar = () => {
   const {numItems } = useContext(Context);
 
   return (
-    <div className='w-full h-20 bg-[#2b2a2a] flex justify-between items-center'>
+    <div className='w-full h-[80px] z-10 px-4 bg-[#96abe8] fixed flex justify-between items-center'>
             <div className='flex-wrap items-center font-semibold ml-6'>
         <Link to='/'>Shop</Link>
         
