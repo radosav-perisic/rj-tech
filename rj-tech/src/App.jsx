@@ -9,10 +9,10 @@ function App() {
  
 
   return (
-      <div className="w-full h-auto min-h-screen">
+      <div className="App">
         <ContextProvider>
        <Router>
-        <Navbar />
+       <Navbar />
         <Routes>
           <Route path='/' element={<Shop />}/>
         <Route path='/cart' element={<Cart />}/>
