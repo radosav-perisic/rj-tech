@@ -5,15 +5,16 @@ export const Context = createContext(null);
 
 const getDefaultCart = () => {
   let cart = {};
-  for (let i = 1; i < PRODUCTS.length + 1; i++) {
-    cart[i] = 0;
-  }
+  PRODUCTS.forEach(product => {
+    cart[product.id] = 0;
+  });
   return cart;
 };
 
 const ContextProvider = (props) => {
-  const [numItems, setNumItems] = useState(0)
+  const [numItems, setNumItems] = useState(0);
   const [cartItems, setCartItems] = useState(getDefaultCart());
+
   const getTotalCartAmount = () => {
     let totalAmount = 0;
     for (const item in cartItems) {
@@ -41,7 +42,6 @@ const ContextProvider = (props) => {
   const updateCartItem = (newAmount, itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: newAmount }));
   };
-
 
   const contextValue = {
     cartItems,
