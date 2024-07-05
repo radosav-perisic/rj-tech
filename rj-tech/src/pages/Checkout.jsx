@@ -58,7 +58,7 @@ const Checkout = () => {
             className="my-3 lg:ml-[50px] ml-[28px] lg:w-[300px] w-[150px] rounded-sm outline-[#838382] outline outline-[0.1px] p-2"
           />
         </div>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, consequatur.</p>
+        <p>Naruci</p>
       </form>
     </div>
     </>
