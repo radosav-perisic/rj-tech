@@ -5,7 +5,7 @@ const Product = (props) => {
   const { id, productName, price, productImage } = props.data;
   const {addToCart, cartItems} =useContext(Context)
 
-  const cartItemAmount = cartItems[id]
+  const cartItemAmount = cartItems[id] || 0;
 
   return (
     <div className="lg:w-[300px] lg:h-[350px] w-[120px] h-[170px] mx-auto flex-col justify-center flex items-center">
