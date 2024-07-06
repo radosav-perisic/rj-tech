@@ -8,10 +8,11 @@ const Navbar = () => {
 
   return (
     <div className="w-full h-[80px] z-10 px-4 bg-[#96abe8] fixed flex justify-between items-center">
-      <div className="flex-1 flex justify-center items-center gap-3 font-semibold">
-        <Link to='/'>Shop</Link>
-        <Link to='/'>Shop</Link>
-        <Link to='/'>Shop</Link>
+      <div className="flex-1 text-lg font flex justify-center items-center gap-7 font-semibold">
+        <Link className="hover-effect" to='/airpods'>Airpods</Link>
+        <Link className="hover-effect" to='/cases'>Cases</Link>
+        <Link className="hover-effect" to='/chargers'>Chargers</Link>
+        <Link className="hover-effect" to='/gadgets'>Gadgets</Link>
       </div>
       <div className="flex items-center mr-6 relative">
         <Link to='/cart'>
@@ -29,3 +30,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+      
