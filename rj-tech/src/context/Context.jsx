@@ -11,7 +11,7 @@ const getDefaultCart = () => {
   return cart;
 };
 
-const ContextProvider = (props) => {
+const ContextProvider = ({ children }) => {
   const [numItems, setNumItems] = useState(0);
   const [cartItems, setCartItems] = useState(getDefaultCart());
 
@@ -53,7 +53,7 @@ const ContextProvider = (props) => {
   };
 
   return (
-    <Context.Provider value={contextValue}>{props.children}</Context.Provider>
+    <Context.Provider value={contextValue}>{children}</Context.Provider>
   );
 };
 

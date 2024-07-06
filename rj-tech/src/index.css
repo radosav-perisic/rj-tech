@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.hover-effect {
+  position: relative;
+  display: inline-block;
+  padding: 2px 4px;
+}
+
+
+a:after {
+    border-radius: 3rem;
+    display:block;
+    content: '';
+    border-bottom: solid 4px rgba(244, 117, 38, 0.916);  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+  }
+  a:hover:after { transform: scaleX(1); }
