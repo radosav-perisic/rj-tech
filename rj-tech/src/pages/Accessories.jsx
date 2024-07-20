@@ -1,6 +1,6 @@
 import React from "react";
-import { PRODUCTS } from "../products";
-import Product from "../products";
+import PRODUCTS from "../products";
+import Product from "../components/Product";
 
 const Accessories = () => {
   const accessoriesProducts = PRODUCTS.filter(product => product.category === "Accessories");
