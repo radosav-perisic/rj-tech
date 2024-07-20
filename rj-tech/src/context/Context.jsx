@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect } from "react";
-import { PRODUCTS } from "../products";
+import PRODUCTS from "../products";
 
 export const Context = createContext(null);
 
@@ -12,8 +12,17 @@ const getDefaultCart = () => {
 };
 
 const ContextProvider = ({ children }) => {
+  const [cartItems, setCartItems] = useState(() => {
+    const savedCart = localStorage.getItem('cartItems');
+    return savedCart ? JSON.parse(savedCart) : getDefaultCart();
+  });
   const [numItems, setNumItems] = useState(0);
-  const [cartItems, setCartItems] = useState(getDefaultCart());
+
+  useEffect(() => {
+    const count = Object.values(cartItems).reduce((a, b) => a + b, 0);
+    setNumItems(count);
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+  }, [cartItems]);
 
   const getTotalCartAmount = () => {
     let totalAmount = 0;
@@ -26,28 +35,27 @@ const ContextProvider = ({ children }) => {
     return totalAmount;
   };
 
-  useEffect(() => {
-    const count = Object.values(cartItems).reduce((a, b) => a + b, 0);
-    setNumItems(count);
-  }, [cartItems]);
-
   const addToCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
   };
 
   const removeFromCart = (itemId) => {
-    setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
+    setCartItems((prev) => {
+      const newCart = { ...prev };
+      newCart[itemId] = Math.max(newCart[itemId] - 1, 0);
+      return newCart;
+    });
   };
 
-  const updateCartItem = (newAmount, itemId) => {
-    setCartItems((prev) => ({ ...prev, [itemId]: newAmount }));
+  const clearCart = () => {
+    setCartItems(getDefaultCart());
   };
 
   const contextValue = {
     cartItems,
     addToCart,
     removeFromCart,
-    updateCartItem,
+    clearCart,
     getTotalCartAmount,
     numItems
   };
