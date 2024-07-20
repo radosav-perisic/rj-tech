@@ -1,24 +1,26 @@
 import React, { useContext } from "react";
-import { Context } from '../context/Context';
+import { Context } from "../context/Context";
 
-const Product = (props) => {
-  const { id, productName, price, productImage } = props.data;
-  const { addToCart, cartItems } = useContext(Context);
-
-  const cartItemAmount = cartItems[id] || 0;
+const Product = ({ data }) => {
+  const { productImage, productName, price, originalPrice, discount, isNew, category, id } = data;
+  const { addToCart } = useContext(Context);
 
   return (
-    <div className="w-[300px] h-[400px] mx-auto flex-col justify-center flex items-center p-2">
-      <img className="w-full h-full object-contain" src={productImage} alt={productName} />
-      <div className="text-center mt-2">
-        <p>{productName}</p>
-        <p>${price}</p>
+    <div className="bg-white  p-4 flex flex-col items-center justify-between relative">
+      <div className={`absolute top-2 left-2 text-white text-xs px-2 py-1 rounded ${isNew ? 'bg-green-500' : 'bg-orange-500'}`}>
+        {isNew ? 'New' : 'Discount'}
       </div>
-      <button
+      <img src={productImage} alt={productName} className="w-full h-32 object-contain mb-4" />
+      <h3 className="text-lg font-bold mb-2">{productName}</h3>
+      <div className="text-sm text-gray-500 mb-2">Category: {category}</div>
+      {discount && <div className="text-red-500 text-sm mb-1">Save: ${discount.toFixed(2)}</div>}
+      {originalPrice && <div className="text-gray-500 line-through">${originalPrice.toFixed(2)}</div>}
+      <div className="text-xl font-bold text-gray-800">${price.toFixed(2)}</div>
+      <button 
+        className="mt-4 bg-yellow-500 text-white py-2 px-4 rounded-full hover:bg-yellow-600"
         onClick={() => addToCart(id)}
-        className="hover:bg-gray-700 hover:text-white duration-300 bg-transparent border-gray-700 border-2 min-w-[100px] pl-[10px] pr-[10px] pt-[5px] pb-[5px] rounded-2xl mt-2"
       >
-        Add to Cart {cartItemAmount > 0 && <> ({cartItemAmount})</>}
+        <i className="fas fa-shopping-cart mr-2"></i> Add to Cart
       </button>
     </div>
   );
