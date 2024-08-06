@@ -11,6 +11,8 @@ import Accessories from "./pages/Accessories";
 import Cases from "./pages/Cases";
 import Chargers from "./pages/Chargers";
 import Watches from './pages/Watches';
+import AboutUs from './pages/AbousUs';
+import Contact from './pages/Contact';
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
             <Route path="/accessories" element={<Accessories />} />
             <Route path="/watches" element={<Watches />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path='/checkout' element={<Checkout />} />
             <Route path='/loyalty-program' element={<LoyaltyProgram />} />
           </Routes>
