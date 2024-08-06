@@ -17,6 +17,8 @@ const ContextProvider = ({ children }) => {
     return savedCart ? JSON.parse(savedCart) : getDefaultCart();
   });
   const [numItems, setNumItems] = useState(0);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const count = Object.values(cartItems).reduce((a, b) => a + b, 0);
@@ -57,7 +59,11 @@ const ContextProvider = ({ children }) => {
     removeFromCart,
     clearCart,
     getTotalCartAmount,
-    numItems
+    numItems,
+    searchQuery,
+    setSearchQuery,
+    loading,
+    setLoading
   };
 
   return (
