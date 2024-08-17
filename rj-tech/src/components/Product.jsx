@@ -7,7 +7,7 @@ const Product = ({ data }) => {
 
   return (
     <div className="bg-white  p-4 flex flex-col items-center justify-between relative">
-      <div className={`absolute top-2 left-2 text-white text-xs px-2 py-1 rounded ${isNew ? 'bg-green-500' : 'bg-orange-500'}`}>
+      <div className={`absolute top-2 left-2 text-white text-xs px-2 py-1 rounded ${isNew ? 'bg-green-500' : 'bg-[#FF5722]/90'}`}>
         {isNew ? 'New' : 'Discount'}
       </div>
       <img src={productImage} alt={productName} className="w-full h-32 object-contain mb-4" />
