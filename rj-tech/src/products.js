@@ -13,15 +13,18 @@ import watchMidnight from "./assets/apple-watch-s7-midnight.png";
 import watchGreen from "./assets/apple-watch-s7-green.jpeg";
 import watchBlu from "./assets/apple-watch-s7-blu-aluminum.jpg";
 import watchStarlight from "./assets/apple-watch-s7-starlight.png";
+import watchRed from "./assets/apple-watch-s7-red.jpg";
 import airpodsMaxGreen from "./assets/airpods-max-green.jpg";
 import airpodsMaxBlue from "./assets/airpods-max-metalic-sky-blue.jpg";
 import airpodsMaxSilver from "./assets/airpods-max-silver.jpg";
 import airpodsMaxGray from "./assets/airpods-max-space-gray.jpg";
 import airpodsMaxRed from "./assets/airpods-max-red.jpg";
 import wirelessCharger from "./assets/magSafe.jpg";
-import usbCharger from "./assets/pink12.jpg";
-import smartwatch from "./assets/pink12.jpg";
-import vrHeadset from "./assets/apple-vision-pro.jpg";
+import usbCharger from "./assets/20w-usb-c-adapter.jpg";
+import iWalkWhite from "./assets/iWalk.jpg";
+import iWalkPink from "./assets/iWalkPink.jpg";
+import vrHeadset from './assets/apple-vision-pro.jpg'
+vrHeadset
 
 const PRODUCTS = [
   {
@@ -89,7 +92,7 @@ const PRODUCTS = [
     isNew: true
   },
   {
-    id: 8,
+    id: 228,
     productName: "Iphone 12 Succulent Green Case",
     price: 39.99,
     productImage: succulentGreen,
@@ -97,7 +100,7 @@ const PRODUCTS = [
     isNew: true
   },
   {
-    id: 35,
+    id: 335,
     productName: "Iphone 12 Dark Green Case",
     price: 39.99,
     productImage: darkGreen,
@@ -169,7 +172,7 @@ const PRODUCTS = [
     isNew: true
   },
   {
-    id: 18,
+    id: 17,
     productName: "VR Headset",
     price: 399.00,
     productImage: vrHeadset,
@@ -184,7 +187,7 @@ const PRODUCTS = [
     isNew: true
   },
   {
-    id: 18,
+    id: 19,
     productName: "Apple Watch S7 Green",
     price: 399.00,
     productImage: watchGreen,
@@ -192,7 +195,7 @@ const PRODUCTS = [
     isNew: true
   },
   {
-    id: 18,
+    id: 20,
     productName: "Apple Watch S7 Midgnight",
     price: 399.00,
     productImage: watchMidnight,
@@ -200,11 +203,82 @@ const PRODUCTS = [
     isNew: true
   },
   {
-    id: 18,
+    id: 21,
+    productName: "Apple Watch S7 Red",
+    price: 399.00,
+    productImage: watchRed,
+    category: "Watches",
+    isNew: true
+  },
+  {
+    id: 22,
     productName: "Apple Watch S7 Starlight",
     price: 399.00,
     productImage: watchStarlight,
     category: "Watches",
+    isNew: true
+  },
+  {
+    id: 23,
+    productName: "iWalk White",
+    price: 45.00,
+    productImage: iWalkWhite,
+    category: "Chargers",
+  },
+  {
+    id: 24,
+    productName: "iWalk Black",
+    price: 399.00,
+    productImage: watchStarlight,
+    category: "Watches",
+    isNew: true
+  },
+  {
+    id: 25,
+    productName: "iWalk Pink Glitter",
+    price: 399.00,
+    productImage: watchStarlight,
+    category: "Watches",
+    isNew: true
+  },
+  {
+    id: 26,
+    productName: "iWalk Blue",
+    price: 399.00,
+    productImage: watchStarlight,
+    category: "Watches",
+    isNew: true
+  },
+  {
+    id: 27,
+    productName: "iWalk Light Blue",
+    price: 399.00,
+    productImage: watchStarlight,
+    category: "Watches",
+    isNew: true
+  },
+  {
+    id: 28,
+    productName: "iWalk Pink",
+    price: 399.00,
+    productImage: iWalkPink,
+    category: "Chargers",
+    isNew: true
+  },
+  {
+    id: 29,
+    productName: "iWalk Magnetic - Black",
+    price: 399.00,
+    productImage: iWalkPink,
+    category: "Chargers",
+    isNew: true
+  },
+  {
+    id: 30,
+    productName: "iWalk Magnetic - White",
+    price: 399.00,
+    productImage: iWalkPink,
+    category: "Chargers",
     isNew: true
   },
 ];
