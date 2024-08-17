@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.hover-effect {
+
+
+/* .hover-effect {
   position: relative;
   display: inline-block;
   padding: 2px 4px;
@@ -17,4 +21,4 @@ a:after {
     transform: scaleX(0);  
     transition: transform 250ms ease-in-out;
   }
-  a:hover:after { transform: scaleX(1); }
+  a:hover:after { transform: scaleX(1); } */
